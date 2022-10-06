@@ -1,14 +1,7 @@
-//========================================================
-// Random Number Functions
-//========================================================
-
 const randomNum = (num) => {
     return Math.floor(Math.random() * num);
 };
 
-//========================================================
-// Fighter Class for Characters
-//========================================================
 
 class Fighter {
     constructor(name, special){
@@ -23,8 +16,6 @@ class Fighter {
 
     attack(target){
 
-        // console.log(target, this)
-
         const move = randomNum(this.moves.length);
 
         const damage = randomNum(this.moves[move].strength);
@@ -37,17 +28,8 @@ class Fighter {
     }
 }
 
-//========================================================
-// Create My Fighters
-//========================================================
-
 const Ken = new Fighter('Ken', 'Shoryuken');
 const Ryu = new Fighter('Ryu',  'Hadoken');
-
-
-//========================================================
-// Toggles
-//========================================================
 
 let gameOver = true;
 let kenRyu = true;
@@ -72,5 +54,4 @@ if (Ryu.life <=0){
     gameOver = false 
 
 }
-    // gameOver = false
 }
